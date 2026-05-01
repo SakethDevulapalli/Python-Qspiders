@@ -83,6 +83,7 @@ else :
 
 
 #WAP to take a character from the user and check wheather it is an alphabet or, a digit or, a special character.
+'''
 char = input("Enter a character : ")
 if 'A' <= char <= 'Z' or 'a' <= char <= 'z' :
     print("alphabet")
@@ -90,3 +91,73 @@ elif char in '0123456789' :
     print("Digit")
 else :
     print("Special Character")
+'''
+
+
+'''     <--- Nested-IF STATEMENT --->     '''
+
+
+'''
+WAP to take any random character from the user and check:
+1.Wheather it is alphabet, then check wheather it is vowel or consonent.
+    - If vowel then print "Vowel"
+    - otherwise, print "consonent"
+2. If not an alphabet then:
+    - If digit, print "Digit"
+    - otherwise, print "Special character"
+'''
+
+'''
+char = input("Enter a character : ")
+if 'A' <= char <= 'Z' or 'a' <= char <= 'z' :
+    if char in 'aeiouAEIOU' :
+        print("Vowel")
+    else :
+        print("Consonent")
+else :
+    if char in '0123456789' :
+        print("Digit")
+    else :
+        print("Special Character")
+'''
+
+
+
+#WAP to take any character from the user and check:
+'''
+1. Wheather it is alphabet or not.
+    a. If alphabet then check wheather it is an "uppercase" or "lowercase" alphabet.
+        - If "uppercase" then convert it into "lowercase" and print it.
+        - If "lowercase" then convert it into "uppercase" and print it.
+2. If not an alphabet then print "provide one alphabet".
+'''
+'''
+alph = input("Enter a alphabet : ")
+check = ord(alph)
+if 'A' <= alph <= 'Z' or 'a' <= alph <= 'z' :
+    if 65 <= check <= 90 :
+        print(chr(ord(alph)+32))
+    elif 97 <= check <= 122 :
+        print(chr(ord(alph)-32))
+else :
+    print("Provide Alphabet")
+'''
+
+
+
+#WAP to take random int numbers and check wheather the 2nd last digit of the number is an even digit or odd digit.
+'''
+-   If even digit, then print the square of the 2nd last digit.
+-   If odd digit, then print the cube of the 2nd last digit.
+'''
+
+digit = int(input("Enter a random digit : "))
+str_num = str(digit)
+if len(str_num) >= 3 :
+    second_last_digit = (digit//10)%10
+    if second_last_digit%2 == 0 :
+        print(second_last_digit * second_last_digit)
+    elif second_last_digit%2 != 0 :
+        print(second_last_digit * second_last_digit * second_last_digit)
+else :
+    print("Not a 3 digit number.")
