@@ -150,7 +150,7 @@ else :
 -   If even digit, then print the square of the 2nd last digit.
 -   If odd digit, then print the cube of the 2nd last digit.
 '''
-
+'''
 digit = int(input("Enter a random digit : "))
 str_num = str(digit)
 if len(str_num) >= 3 :
@@ -161,3 +161,83 @@ if len(str_num) >= 3 :
         print(second_last_digit * second_last_digit * second_last_digit)
 else :
     print("Not a 3 digit number.")
+'''
+
+'''    <---  WHILE LOOP  --->   '''
+
+#WAP to print numbers from 1 to 10 using a while loop.
+'''
+i = 1
+while i<= 10 :
+    print(i, end = " ")
+    i += 1
+'''
+#WAP  to print numbers from 10 to 1 in reverse order
+'''
+i = 10
+while i >= 1 :
+    print(i, end=" ")
+    i -= 1
+'''
+
+#WAP to print all even numbers from 1 to 50
+'''
+i = 1
+while i <= 50 :
+    if i%2 == 0 :
+        print(i, end=" ")
+    i += 1
+'''
+
+#WAP to print all odd numbers from 1 to 50
+'''
+i = 1
+while i <= 50 :
+    if i%2 != 0 :
+        print(i, end=" ")
+    i += 1
+'''
+
+#WAP to find the sum of the first 10 natural numbers using a while loop
+'''
+i = 1
+sum = 0
+while i <= 10 :
+    sum += i
+    i += 1
+print(sum)
+'''
+
+# Write a program to calculate the factorial of a number using a while loop.
+'''
+i = 5
+fact = 1
+while i >= 1 :
+    fact *= i
+    i -= 1
+print(fact)
+'''
+
+# Write a program to count the number of digits in a given number.
+
+num = 2345
+
+
+
+# Write a program to reverse a number using a while loop.
+'''
+num = 2345
+str_num = str(num)
+print(str_num[ : : -1])
+'''
+
+
+
+# Write a program to print the multiplication table of a given number using a while loop.
+'''
+num = 5
+i = 1
+while i <= 10 :
+    print(num*i)
+    i += 1
+'''    
