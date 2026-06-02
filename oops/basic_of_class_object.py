@@ -66,15 +66,56 @@
 # print('toyota.max_speed:', toyota.max_speed)
 # print()
 
+
+'''
+Methods: 
+    - Object/Instance method
+    - Class method
+    - Static method
+'''
+'''Using the Object/Instance Methods:e'''
 class Car:
-    def __init__(self, wheelers, gears, base_speed, max_speed):
-        self.wheelers = wheelers
-        self.gears = gears
+    name = "CAR"
+    version = 1.0
+
+    def __init__(self, engine, base_speed, max_speed):
+        self.engine = engine
         self.base_speed = base_speed
         self.max_speed = max_speed
 
-tata = Car(4, 6, "60Kmph", "180Kmph")
-print("tata.wheelers:", tata.wheelers)
-print("tata.gears:", tata.gears)
-print("tata.base_speed:", tata.base_speed)
-print("tata.max_speed:", tata.max_speed)
+    def info(self):
+        print("Engine:", self.engine)
+        print("Base.speed:", self.base_speed)
+        print("Max_speed:", self.max_speed)
+
+    @classmethod
+    def class_version(cls, new_version):
+        cls.version = new_version
+
+    @classmethod
+    def props(cls) :
+        print('Name:', cls.name)
+        print('Version:', cls.version)
+
+    def update_engine_type(self, new_engine_type):
+        self.engine = new_engine_type
+
+    def update_base_speed(self, new_base_speed):
+        self.base_speed = new_base_speed
+    
+    def update_max_speed(self, new_max_speed):
+        self.max_speed = new_max_speed
+
+tata = Car("EV", "60Kmph", "180Kmph")
+print("Before update:")
+print('Name:', tata.name)
+print('Version:', tata.version)
+tata.info()
+print()
+print("After update:")
+tata.update_engine_type("Petrol")
+tata.update_base_speed("80kmph")
+tata.update_max_speed("160kmph")
+tata.info()
+# lambrogini = Car("petrol engine", "120Kmph", "380Kmph")
+# lambrogini.info()
